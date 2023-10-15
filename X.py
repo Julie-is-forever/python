@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-from tqdm import tqdm
 artworks=[]
 URL = "https://collections.louvre.fr/en/recherche?typology%5B0%5D=1"
 r = requests.get(URL)
