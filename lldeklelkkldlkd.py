@@ -39,3 +39,6 @@ else:
     else:
         # No real solutions
         print("No real solutions for these coefficients.")
+
+
+#pomáhal mi chatgpt - opravila jsem prakticky jen detaily.....
