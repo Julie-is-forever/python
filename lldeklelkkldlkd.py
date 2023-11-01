@@ -4,10 +4,16 @@ b = float(input("Enter the coefficient b: "))
 c = float(input("Enter the coefficient c: "))
 
 # Print the full equation
-if a != 0:
+if a != 0 and b !=0 and c !=0:
     print(f"Equation: {a}x^2 + {b}x + {c} = 0")
-else:
-    print(f"Equation: {b}x + {c} = 0 (Linear Equation)")
+if a != 0 and b !=0 and c==0 :
+    print(f"Equation: {a}x^2 + {b}x= 0")
+if a != 0 and  b== 0 and c !=0:
+    print(f"Equation: {a}x^2 + {c} = 0")
+
+if a != 0 and b== 0 and c== 0:
+    print(f"Equation: {a}x^2 = 0")
+
 
 if a == 0:
     # Handle the case of a linear equation
@@ -39,6 +45,3 @@ else:
     else:
         # No real solutions
         print("No real solutions for these coefficients.")
-
-
-#pomáhal mi chatgpt - opravila jsem prakticky jen detaily.....
