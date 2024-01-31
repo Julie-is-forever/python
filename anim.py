@@ -1,4 +1,3 @@
-%%manim -v WARNING -qm AlignTo
 
 
 class AlignTo(Scene):
