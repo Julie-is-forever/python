@@ -1,40 +1,45 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GJK Favourite Movies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
 
-<h1>GJK favourite movies</h1>
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">GJK Favourite Movies</h1>
+        <p class="lead">Welcome to my page of favorite movies at GJK. Help me complete this list by answering one simple question! =D </p>
+        <form method="post" action="/data">
+            <div class="form-group">
+                <label for="fmovie">Movie name:</label>
+                <input type="text" class="form-control" id="fmovie" name="fmovie" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 
-<p>Welcome, this is a page of favourite movies at GJK.</p>
-<br>
-<p>Could you help us expand this page by answering one simple question?</p>
-
-
-<form method="post" action="/data">
-    <label for="fmovie">Movie name:</label><br>
-    <input type="text" id="fmovie" name="fmovie" value=""><br>
-    <input type="submit" value="Submit">
-</form> 
-
-
+    {% if movies %}
+        <table class="table table-bordered mt-4">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Answer Number</th>
+                    <th scope="col">Movies</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in movies %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ movie }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</div>
 
 </body>
 </html>
-
-
-<table class="table table-bordered" id="users">
-    <thead>
-      <tr>
-        <th>Number</th>
-        <th>Movies</th>
-      </tr>
-    </thead>
-    <tbody>
-    <!-- for .. in movies -->
-      <tr>
-        <td rowspan="1">1</td>
-        <td>...</td>
-        <td>...</td>
-        <td><a href="#">{value}</a></td>
-        </tr>
-    </tbody>
-  </table>

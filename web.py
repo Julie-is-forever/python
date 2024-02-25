@@ -14,7 +14,7 @@ def home():
 def success(name):
    movies.append(name)
    print(tabulate(movies))
-   return f"{name} is a great movie, thank you for your answer, all names: {movies} \n\n <pre>{tabulate(movies)}</pre>"
+   return f"{name} is a great movie. Thank you for your answer, the current answers are {movies} \n\n"
 
 @app.route('/data',methods = ['POST'])
 def data():
