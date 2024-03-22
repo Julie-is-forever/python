@@ -27,13 +27,16 @@
                 <tr>
                     <th scope="col">Answer Number</th>
                     <th scope="col">Movies</th>
+                    <th scope="col">Likes</th>
                 </tr>
             </thead>
             <tbody>
-                {% for movie in movies %}
+                {% for movie_name, like_count in movies.items() %}
                     <tr>
                         <td>{{ loop.index }}</td>
-                        <td>{{ movie }}</td>
+                        <td>{{ movie_name }}</td>
+                        <td>{{ like_count }}</td>
+                        <td></td>
                     </tr>
                 {% endfor %}
             </tbody>
